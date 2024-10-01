@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link href="http://127.0.0.1:5500/registro.html" rel="stylesheet">
+    <style>
+        /* Añadimos el mismo estilo del login */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-field label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Nuevo Usuario</h2>
+        <form id="registerForm">
+            <div class="input-field">
+                <label for="nombre">Nombre</label>
+                <input type="nombre" id="newnombre" placeholder="Ingresa tu nombre" required>
+           </div>
+           <div class="input-field">
+            <label for="Apellido">Apellido</label>
+            <input type="apellido" id="newApellido" placeholder="Ingresa tu apelido" required>
+
+                <label for="newEmail">Correo Electrónico</label>
+                <input type="email" id="newEmail" placeholder="Ingresa tu correo" required>
+            </div>
+            <div class="input-field">
+                <label for="newPassword">Contraseña</label>
+                <input type="password" id="newPassword" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <button type="button" class="button" onclick="registerUser()">Registrar</button>
+            <p class="message" id="registerMessage"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
